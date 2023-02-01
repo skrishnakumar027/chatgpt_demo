@@ -34,5 +34,5 @@ def main():
         prediction = image_model(image)[0]
         st.write("Facial Expression:", prediction["label"])
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
