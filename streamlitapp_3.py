@@ -2,6 +2,9 @@ import streamlit as st
 import transformers
 from PIL import Image
 
+st.set_page_config(page_title="DTCC ChatPGT Demo", page_icon=":smile:", layout="wide")
+st.title("A facial expression and sentiment analyzer")
+
 # Load the sentiment classifier
 sentiment_model = transformers.pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english")
 
@@ -14,9 +17,7 @@ image_model = load_model()
 
 # Define the Streamlit app
 def main():
-    st.set_page_config(page_title="DTCC ChatPGT Demo", page_icon=":smile:", layout="wide")
-    st.title("A facial expression and sentiment analyzer")
-
+    
     # Get the input text
     input_text = st.text_input("Enter a sentence to analyze sentiment:")
 
