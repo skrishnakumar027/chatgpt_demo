@@ -18,7 +18,7 @@ st.subheader("Facial Expression Analyzer")
 image_file = st.file_uploader("Upload an image of a face:")
 if image_file:
     image = Image.open(image_file)
-    facial_expression_model = pipeline("facial-expression", model="Rajaram1996/FacialEmoRecog")
+    facial_expression_model = pipeline("image-classification", model="Rajaram1996/FacialEmoRecog")
     facial_expression = facial_expression_model(image)[0]["emotion"]
     st.image(image, caption=f"The facial expression is: {facial_expression}")
 
