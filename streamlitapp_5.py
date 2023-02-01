@@ -20,4 +20,5 @@ uploaded_file = st.file_uploader("Upload an image")
 if uploaded_file:
     image = Image.open(uploaded_file)
     facial_expression = facial_expression_classifier(image)
-    st.image(image, caption=f"The facial expression is: {facial_expression[0]["label"]}")
+    st.image(image)
+    st.write("Facial expression:", facial_expression[0]["label"])
