@@ -1,5 +1,4 @@
 import streamlit as st
-import pytorch
 import torch
 from transformers import pipeline
 from PIL import Image
